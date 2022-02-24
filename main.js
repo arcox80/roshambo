@@ -52,9 +52,9 @@ let determineWinner = (userChoice, computerChoice) => {
 
 let playGame = () => {
   let userChoice = getUserChoice();
-  console.log(userChoice);
+  //console.log(userChoice);
   let computerChoice = getComputerChoice();
-  console.log(computerChoice);
+  //console.log(computerChoice);
   console.log(determineWinner(userChoice, computerChoice));
 };
 
