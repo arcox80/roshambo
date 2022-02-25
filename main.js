@@ -26,7 +26,7 @@ let getComputerChoice = () => {
 
 let determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
-    return `I chose ${computerChoice} too. It's a tie.`;
+    return `I chose ${computerChoice} too. It's a draw.`;
   } else if (userChoice === 'rock') {
     if (computerChoice === 'paper') {
       return `I chose paper. You lose!`
@@ -52,9 +52,7 @@ let determineWinner = (userChoice, computerChoice) => {
 
 let playGame = () => {
   let userChoice = getUserChoice();
-  //console.log(userChoice);
   let computerChoice = getComputerChoice();
-  //console.log(computerChoice);
   console.log(determineWinner(userChoice, computerChoice));
 };
 
