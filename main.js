@@ -6,6 +6,8 @@ let getUserChoice = () => {
   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
     console.log(`You chose ${userInput}.`);
     return userInput;
+  } else if (userInput === 'bomb') {
+    return userInput;
   } else {
     window.alert('Please choose either rock, paper, or scissors.');
     return getUserChoice();
@@ -25,7 +27,9 @@ let getComputerChoice = () => {
 };
 
 let determineWinner = (userChoice, computerChoice) => {
-  if (userChoice === computerChoice) {
+  if (userChoice === 'bomb') {
+    return 'You win...cheater!'
+  } else if (userChoice === computerChoice) {
     return `I chose ${computerChoice} too. It's a draw.`;
   } else if (userChoice === 'rock') {
     if (computerChoice === 'paper') {
